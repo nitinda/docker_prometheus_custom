@@ -20,7 +20,7 @@ build:
 	docker build --rm --force-rm --compress -t ${IMG} .
 	docker tag ${IMG} ${LATEST}
 
-push:
+push: build
 	@echo "Docker push to github"
 	docker push ${NAME}
 
